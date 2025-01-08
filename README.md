@@ -1,3 +1,6 @@
+
+
+
 package mat;
 import java.util.Scanner;
 public class Funçaoresolver {
