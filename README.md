@@ -1,32 +1,25 @@
-# calculo media em java
-
-package calculo;
-
+package mat;
 import java.util.Scanner;
-
-public class Media {
-	
+public class Funçaoresolver {
 	public static void main(String [] args) {
 		
-		double r1 = 0;
-		double r2 = 0;
+		double x = 0;
+		double a = 0;
+		double b = 0;
 		
 		Scanner ler = new Scanner(System.in);
 		
-		System.out.println("Digite o primeiro número: " );
+		System.out.println("Digite o valor de x: ");
+		x = ler.nextDouble();
 		
-		r1 = ler.nextDouble();
+		System.out.println("Digite o valor de a: ");
+		a = ler.nextDouble();
 		
-		System.out.println("Digite o segundo número: " );
+		System.out.println("Digite o valor de b: ");
+		b = ler.nextDouble();
 		
-		r2 = ler.nextDouble();
-
+		double funcao = a * x + b;
 		
-		double media_total = (r1 + r2)/2 ;
-		
-		System.out.printf("O resultado da media é %f: ", media_total);	
-		
+		System.out.printf("O resultado da funcao é %f: ", + funcao);	
 	}	
-		
-		
 }
