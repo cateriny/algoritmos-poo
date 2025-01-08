@@ -24,11 +24,7 @@ public class Media {
 		
 		double media_total = (r1 + r2)/2 ;
 		
-		System.out.printf("O resultado da media é %f: ", media_total);
-		
-		
-		
-		
+		System.out.printf("O resultado da media é %f: ", media_total);	
 		
 	}	
 		
