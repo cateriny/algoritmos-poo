@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class FuncaoPrimeiroGrau {
+    public static void main(String[] args) {
+        // Criar um scanner para entrada de dados
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar os coeficientes a, b e o valor de x
+        System.out.print("Digite o valor de a (coeficiente angular): ");
+        double a = scanner.nextDouble();
+
+        System.out.print("Digite o valor de b (coeficiente linear): ");
+        double b = scanner.nextDouble();
+
+        System.out.print("Digite o valor de x: ");
+        double x = scanner.nextDouble();
+
+        // Calcular a função f(x) = ax + b
+        double resultado = a * x + b;
+
+        // Exibir o resultado
+        System.out.println("O resultado da função f(x) = " + resultado);
+
+        // Fechar o scanner
+        scanner.close();
+    }
+}
