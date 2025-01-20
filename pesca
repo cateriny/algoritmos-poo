@@ -1,0 +1,194 @@
+package pescaesportiva;
+
+
+public class Local {
+	
+	//atributos
+	
+	String endereco;
+	String cidade;
+	String cep;
+	String latitude;
+	String longitude;
+	
+	//Construtor
+	Local(String endereco, String cidade, String cep, String latitude, String longitude){
+		
+		//usar a variavel da classe global e nao usando e a variavel local.
+		//inicialiazando os atributos
+		this.endereco = endereco;
+		this.cidade = cidade;
+		this.cep = cep;
+		this.latitude = latitude;
+		this.longitude = longitude;
+		
+	}
+	
+    Local(){ //Declarando um objeto de teste
+    	this.endereco = "Rua 1";
+    	this.cidade = "Nenhuma";
+    	this.cep = "000-000";
+    	this.latitude = "-00000.00";
+    	this.longitude = "00000.00";
+    }
+	//Métodos
+    
+    public void imprimir() {
+    	System.out.println("Endereço = "+ this.endereco);
+    	System.out.println("Latitude = "+ this.latitude +"Longitude = " + this.longitude);
+    }
+	public void checarCEP() {
+    }
+	
+}
+
+package pescaesportiva;
+
+public class Main {
+
+	public static void main(String [] args) {
+		
+		//objeto do tipo local(nome do objeto com letra minusculo, e o new local é a inicialização do construtor
+		Local local_1 = new Local("Tv. Carlos Maria Teixeira", "Oriximiná", "68270-000","-999", "999");
+		Local local_2 = new Local();
+		
+		local_2.imprimir();
+		System.out.println("");
+		local_2.imprimir();
+		
+	}
+}
+//o construtor obriga a variavel ter valor 
+//toda classe tem um construtor, nao precisa ser declarado
+
+package pescaesportiva;
+
+public class Main {
+
+	public static void main(String [] args) {
+		
+		//objeto do tipo local(nome do objeto com letra minusculo, e o new local é a inicialização do construtor
+		Local local_1 = new Local("Tv. Carlos Maria Teixeira", "Oriximiná", "68270-000","-999", "999");
+		Local local_2 = new Local();
+		
+		local_2.imprimir();
+		System.out.println("");
+		local_2.imprimir();
+		
+	}
+}
+//o construtor obriga a variavel ter valor 
+//toda classe tem um construtor, nao precisa ser declarado
+
+public class Local {
+	
+	//atributos
+	
+	String endereco;
+	String cidade;
+	String cep;
+	String latitude;
+	String longitude;
+	
+	//Construtor
+	Local(String endereco, String cidade, String cep, String latitude, String longitude){
+		
+		//usar a variavel da classe global e nao usando e a variavel local.
+		//inicialiazando os atributos
+		this.endereco = endereco;
+		this.cidade = cidade;
+		this.cep = cep;
+		this.latitude = latitude;
+		this.longitude = longitude;
+		
+	}
+	
+    Local(){ //Declarando um objeto de teste
+    	this.endereco = "Rua 1";
+    	this.cidade = "Nenhuma";
+    	this.cep = "000-000";
+    	this.latitude = "-00000.00";
+    	this.longitude = "00000.00";
+    }
+	//Métodos
+    
+    public void imprimir() {
+    	System.out.println("Endereço = "+ this.endereco);
+    	System.out.println("Cidade = "+ this.cidade);
+    	System.out.println("Cep = "+ this.cep);
+    	System.out.println("Latitude = "+ this.latitude +  "Longitude = " + this.longitude);
+    	System.out.println("Longitude = " + this.longitude);
+    }
+	public void checarCEP() {
+    } 
+	
+}
+
+package pescaesportiva;
+
+public class Main {
+
+	public static void main(String [] args) {
+		
+		//objeto do tipo local(nome do objeto com letra minusculo, e o new local é a inicialização do construtor
+		Local local_1 = new Local("Tv. Carlos Maria Teixeira", "Oriximiná", "68270-000","-999", "999");
+		Local local_2 = new Local();
+		
+		
+		local_1.imprimir();
+		System.out.println("");
+		local_2.imprimir();
+		
+	}
+}
+//o construtor obriga a variavel ter valor 
+//toda classe tem um construtor, nao precisa ser declarado
+//classe precisa: atributo, construtor e metodos
+
+package pescaesportiva;
+
+public class Main {
+
+	public static void main(String [] args) {
+		
+		//objeto do tipo local(nome do objeto com letra minusculo, e o new local é a inicialização do construtor
+		Local local_1 = new Local("Tv. Carlos Maria Teixeira", "Oriximiná", "68270-000","-999", "999");
+		Local local_2 = new Local();
+		
+		
+		local_1.imprimir();
+		System.out.println("");
+		local_2.imprimir();
+		
+		Competicao competicao = new Competicao("OrixiPesca","25/02/2025", local_1); 
+			Competicao competicao_2 = new Competicao("OrixiPesca","25/02/2025", local_2); 
+	}
+}
+//o construtor obriga a variavel ter valor 
+//toda classe tem um construtor, nao precisa ser declarado
+//classe precisa: atributo, construtor e metodos
+
+package pescaesportiva;
+
+public class Competicao {
+	String nome;
+	String data;
+	Local local;  //dependencia
+	
+	Competicao(String nome, String data, Local local){
+		this.nome = nome;
+		this.data = data;
+		this.local = local;
+	}
+	public void cadastrarCompeticao() {
+		
+	}
+}
+         //classe = molde dos objetos
+		 //atributos de classe = variaveis globais
+		 //criar objetos na classe = construtor, mais de um construtor, pode ter mais de um construtor dentro de uma classe
+		 //declara os comportamentos = metodos
+		 //variavel local = dentro da estratura que foi criada
+		 //precisa da informacao que vem de outra classe: dependencia
+		 //heranca;
+
