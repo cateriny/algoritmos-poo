@@ -1,0 +1,48 @@
+package resistenciaserieparalelo;
+
+import java.util.Scanner;
+
+public class ResistenciaSerieParalelo {
+	
+    public static void main(String [] args) {
+		
+		double r1, r2, r3;
+		String sair;
+		
+		Scanner ler = new Scanner(System.in);
+		
+		while(true) {
+		
+		r1 = ler.nextDouble();
+		r2 = ler.nextDouble();
+		r3 = ler.nextDouble();
+		
+		String opcao = ler.next();
+		
+		double resistencia;
+		
+		switch (opcao) {
+		case "1": {
+			resistencia = r1 + r2 + r3;
+			break;
+		}
+		case "2":{
+			resistencia = (1/r1)+(1/r2)+(1/r3);
+			break;
+		}
+		default:{
+			System.out.println("opção inválida");	
+			resistencia = 0;
+		}
+        }
+		System.out.printf("Resistencia total é igual a: " + resistencia);
+		System.out.println("Deseja Continuar? S = Sim e N = Não");
+		sair = ler.next();
+		
+		if(sair.equals("N")) {  //SAIR == "N"
+			break;
+		}
+	}
+    }
+    
+}
