@@ -1,0 +1,192 @@
+package transportadora;
+
+public class Veiculo {
+	private String placa;
+	private String modelo;
+	private double capacidade; //volume total
+	private boolean disponibilidade;
+	private Motorista motorista;
+	
+	Veiculo(String placa, String modelo, double capacidade, boolean disponibilidade, Motorista motorista){
+		this.placa = placa;
+		this.modelo = modelo;
+		this.capcidade = capacidade;
+		this.disponibilidade = disponibilidade;
+		this.motorista = motorista;
+	}
+	
+	public void setPlaca(String placa) {
+		this.placa = placa;
+	}
+	
+	public String getPlaca() {
+		return this.placa;
+	}
+	
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+	
+	public String getModelo() {
+		return this.modelo;
+	}
+	
+	public void setCapacidade(String capacidade) {
+		this.capacidade = capacidade;
+	}
+	
+	public double getCapacidade() {
+		return this.capacidade ;
+	}
+	
+	public void setDisponibilidade(boolean disponibilidade) {
+		this.disponibilidade = disponibilidade;
+	}
+	
+	public boolean getDisponibilidade() {
+		return this.disponibilidade;
+	}
+	
+	public void setMotorista(Motorista motorista) {
+		this.motorista = motorista;
+	}
+	
+	public Motorista getMotorista() {
+		return this.motorista;
+	}
+}
+
+package transportadora;
+
+public class Motorista {
+	private String nome;
+	private String cnh;
+	private String contato;
+	private string endereco;
+	
+	Motorista(String nome, String cnh, String contato, String endereco){
+		this.nome = nome;
+		this.cnh = cnh;
+		this.contato = contato;
+		this.endereco = endereco;
+	}
+	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	public String getNome() {
+		return this.nome;
+	}
+	public void setCnh(String cnh) {
+		this.cnh = cnh;
+	}
+	
+	public String getCnh() {
+		return this.cnh;
+	}
+	public void setContato(String contato) {
+		this.contato = contato;
+	}
+	
+	public String getContato() {
+		return this.contato;
+	}
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+	
+	public String getEndereco() {
+		return this.endereco;
+	}
+}
+
+package com.transportadora;
+
+public class Main {
+    public static void main(String[] args) {
+        // Criando um motorista
+        Motorista motorista = new Motorista("Carlos Silva", "123456789", 35);
+        System.out.println(motorista);
+
+        // Alterando informações do motorista
+        motorista.setIdade(36);
+        System.out.println("Idade atualizada: " + motorista.getIdade());
+
+        // Criando um veículo
+        Veiculo veiculo = new Veiculo("ABC-1234", "Caminhão", 2020);
+        System.out.println(veiculo);
+
+        // Alterando informações do veículo
+        veiculo.setModelo("Caminhão Baú");
+        System.out.println("Modelo atualizado: " + veiculo.getModelo());
+    }
+}
+
+package com.transportadora;
+
+public class Main {
+    public static void main(String[] args) {
+        // Criando um motorista
+        Motorista motorista = new Motorista("Carlos Silva", "123456789", 35);
+        System.out.println(motorista);
+
+        // Alterando informações do motorista
+        motorista.setIdade(36);
+        System.out.println("Idade atualizada: " + motorista.getIdade());
+
+        // Criando um veículo
+        Veiculo veiculo = new Veiculo("ABC-1234", "Caminhão", 2020);
+        System.out.println(veiculo);
+
+        // Alterando informações do veículo
+        veiculo.setModelo("Caminhão Baú");
+        System.out.println("Modelo atualizado: " + veiculo.getModelo());
+    }
+}
+
+package com.transportadora;
+
+public class Veiculo {
+    private String placa;
+    private String modelo;
+    private int ano;
+
+    // Construtor
+    public Veiculo(String placa, String modelo, int ano) {
+        this.placa = placa;
+        this.modelo = modelo;
+        this.ano = ano;
+    }
+
+    // Getters e Setters
+    public String getPlaca() {
+        return placa;
+    }
+
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+
+    @Override
+    public String toString() {
+        return "Veiculo [Placa=" + placa + ", Modelo=" + modelo + ", Ano=" + ano + "]";
+    }
+}
+
